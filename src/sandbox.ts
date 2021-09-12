@@ -1,9 +1,10 @@
 // string
 let mynames = "Sneha Maurya";
+
 function areaOfCircles(radius: number) {
   return 2 * Math.PI * radius;
 }
-console.log(areaOfCircle(2));
+console.log(areaOfCircles(2));
 
 // arrays and objects
 let names = ["hitashi", "saske", "yoshida"];
@@ -13,16 +14,27 @@ let numbers = [4, 6, 7];
 numbers.push(8);
 
 // create a custom type and asign it
-type People = {
+type Peoples = {
   name: string;
   age: number;
   working: boolean;
 };
 
-let info: People;
-info.name = "sneha";
-info.age = 34;
-info.working = false;
+// explicit type
+let People_: {
+  name: string;
+  age: number;
+  working: boolean;
+};
+People_={
+  name:"sneha",
+  age:43,
+  working:false
+}
+// let info: People;
+// info.name = "sneha";
+// info.age = 34;
+// info.working = false;
 //explicit types
 //array
 let ninjas: string[];
@@ -32,3 +44,8 @@ let ninjas: string[];
 let mixed: (string | number)[] = []; // union types
 mixed.push(34);
 mixed.push("hello");
+
+// any type
+
+let age: any;
+age = "25";
